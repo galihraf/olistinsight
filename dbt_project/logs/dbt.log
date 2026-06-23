@@ -238,3 +238,687 @@ alter view "olist"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
 [0m11:00:27.762898 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001316CB5F710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001316CB5DDD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000013164F89190>]}
 [0m11:00:27.762898 [debug] [MainThread]: Flushing usage events
 [0m11:00:29.471276 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:47:34.222999 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC64A1D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC717810>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC717450>]}
+
+
+============================== 11:47:34.227083 | 040a3a24-f3bb-41ff-9040-31812c897064 ==============================
+[0m11:47:34.227083 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:47:34.227083 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\galih\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run --select stg_order_items', 'use_experimental_parser': 'False', 'log_path': 'D:\\Documents\\Portofolio Projects\\olistinsight\\dbt_project\\logs'}
+[0m11:47:34.561971 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC7814D0>]}
+[0m11:47:34.612850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC708410>]}
+[0m11:47:34.623577 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:47:34.983645 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m11:47:35.166535 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m11:47:35.166535 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_order_items.sql
+[0m11:47:35.441019 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_project.marts
+- models.dbt_project.intermediate
+[0m11:47:35.448570 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDCCA8490>]}
+[0m11:47:35.514649 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m11:47:35.518046 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m11:47:35.530365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDCCE3AD0>]}
+[0m11:47:35.530365 [info ] [MainThread]: Found 2 models, 485 macros
+[0m11:47:35.530365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC979FD0>]}
+[0m11:47:35.543663 [info ] [MainThread]: 
+[0m11:47:35.546305 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:47:35.546305 [info ] [MainThread]: 
+[0m11:47:35.546305 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:47:35.550642 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist'
+[0m11:47:35.642743 [debug] [ThreadPool]: Using duckdb connection "list_olist"
+[0m11:47:35.642743 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"olist"'
+    
+  
+  
+[0m11:47:35.644498 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:47:35.692850 [debug] [ThreadPool]: SQL status: OK in 0.049 seconds
+[0m11:47:35.695637 [debug] [ThreadPool]: On list_olist: Close
+[0m11:47:35.696733 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_main)
+[0m11:47:35.698463 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "main"
+"
+[0m11:47:35.704523 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:47:35.706533 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='olist'
+        and type='sqlite'
+    
+  
+[0m11:47:35.706533 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:47:35.706533 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m11:47:35.710624 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:47:35.710624 [debug] [ThreadPool]: On create_olist_main: BEGIN
+[0m11:47:35.710624 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:47:35.713294 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:47:35.713294 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+    
+        create schema if not exists "olist"."main"
+    
+[0m11:47:35.715821 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:47:35.715821 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m11:47:35.717214 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:47:35.717214 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m11:47:35.717214 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:47:35.719222 [debug] [ThreadPool]: On create_olist_main: Close
+[0m11:47:35.721356 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist_main'
+[0m11:47:35.726620 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m11:47:35.726620 [debug] [ThreadPool]: On list_olist_main: BEGIN
+[0m11:47:35.726620 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:47:35.726620 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:47:35.732617 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m11:47:35.732617 [debug] [ThreadPool]: On list_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist_main"} */
+select
+      'olist' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'olist'
+  
+[0m11:47:35.739891 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m11:47:35.742269 [debug] [ThreadPool]: On list_olist_main: ROLLBACK
+[0m11:47:35.742269 [debug] [ThreadPool]: Failed to rollback 'list_olist_main'
+[0m11:47:35.742269 [debug] [ThreadPool]: On list_olist_main: Close
+[0m11:47:35.742269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FD8062290>]}
+[0m11:47:35.742269 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:47:35.742269 [debug] [MainThread]: On master: BEGIN
+[0m11:47:35.742269 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:47:35.742269 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:47:35.742269 [debug] [MainThread]: On master: COMMIT
+[0m11:47:35.742269 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:47:35.742269 [debug] [MainThread]: On master: COMMIT
+[0m11:47:35.742269 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:47:35.742269 [debug] [MainThread]: On master: Close
+[0m11:47:35.758105 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_order_items
+[0m11:47:35.758105 [info ] [Thread-1 (]: 1 of 1 START sql view model main.stg_order_items ............................... [RUN]
+[0m11:47:35.763932 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.stg_order_items'
+[0m11:47:35.763932 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_order_items
+[0m11:47:35.765946 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_order_items"
+[0m11:47:35.765946 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_order_items
+[0m11:47:35.801921 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_order_items"
+[0m11:47:35.803342 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:47:35.803921 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: BEGIN
+[0m11:47:35.803921 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:47:35.804924 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:47:35.806229 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:47:35.807463 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+  
+  create view "olist"."main"."stg_order_items__dbt_tmp" as (
+    with source as (
+    select * from main.order_items
+),
+
+renamed as (
+    select
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        cast(shipping_limit_date as timestamp) as shipping_limit_at,
+        cast(price as decimal(10,2)) as price,
+        cast(freight_value as decimal(10,2)) as freight_value
+    from source
+    where order_id is not null
+    and price >= 0
+)
+
+select * from renamed
+  );
+
+[0m11:47:35.809977 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:47:35.817443 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:47:35.817443 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter view "olist"."main"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m11:47:35.819693 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:47:35.829692 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m11:47:35.829692 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:47:35.829692 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m11:47:35.829692 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m11:47:35.829692 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:47:35.829692 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+      drop view if exists "olist"."main"."stg_order_items__dbt_backup" cascade
+    
+[0m11:47:35.845454 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:47:35.848330 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: Close
+[0m11:47:35.851492 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '040a3a24-f3bb-41ff-9040-31812c897064', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDD291250>]}
+[0m11:47:35.854695 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.stg_order_items .......................... [[32mOK[0m in 0.08s]
+[0m11:47:35.854695 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_order_items
+[0m11:47:35.858112 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:47:35.858112 [debug] [MainThread]: On master: BEGIN
+[0m11:47:35.858112 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:47:35.859779 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:47:35.859779 [debug] [MainThread]: On master: COMMIT
+[0m11:47:35.861004 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:47:35.861004 [debug] [MainThread]: On master: COMMIT
+[0m11:47:35.862047 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:47:35.863098 [debug] [MainThread]: On master: Close
+[0m11:47:35.863699 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:47:35.863699 [debug] [MainThread]: Connection 'create_olist_main' was properly closed.
+[0m11:47:35.864748 [debug] [MainThread]: Connection 'list_olist_main' was properly closed.
+[0m11:47:35.864748 [debug] [MainThread]: Connection 'model.dbt_project.stg_order_items' was properly closed.
+[0m11:47:35.865741 [info ] [MainThread]: 
+[0m11:47:35.865741 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m11:47:35.867851 [debug] [MainThread]: Command end result
+[0m11:47:35.896277 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m11:47:35.898561 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m11:47:35.898561 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\run_results.json
+[0m11:47:35.898561 [info ] [MainThread]: 
+[0m11:47:35.898561 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:47:35.898561 [info ] [MainThread]: 
+[0m11:47:35.898561 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m11:47:35.912749 [debug] [MainThread]: Command `dbt run` succeeded at 11:47:35.912749 after 1.79 seconds
+[0m11:47:35.912749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDC737FD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FDB340C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000018FD4B3F650>]}
+[0m11:47:35.912749 [debug] [MainThread]: Flushing usage events
+[0m11:47:37.628585 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:53:01.985303 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ABA8FC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ABB3E0D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACBBC350>]}
+
+
+============================== 11:53:01.985303 | 34dead32-1db8-4271-ac0f-4006b3177ce1 ==============================
+[0m11:53:01.985303 [info ] [MainThread]: Running with dbt=1.11.11
+[0m11:53:01.985303 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\galih\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select staging', 'use_experimental_parser': 'False', 'log_path': 'D:\\Documents\\Portofolio Projects\\olistinsight\\dbt_project\\logs'}
+[0m11:53:02.209689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACBAD9D0>]}
+[0m11:53:02.266238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AAB0B390>]}
+[0m11:53:02.266238 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:53:02.636107 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 5 files added, 0 files changed.
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_products.sql
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_reviews.sql
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_sellers.sql
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_payments.sql
+[0m11:53:02.768930 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\staging\stg_customers.sql
+[0m11:53:03.037646 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.dbt_project.marts
+- models.dbt_project.intermediate
+[0m11:53:03.053784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACBCC3D0>]}
+[0m11:53:03.124220 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m11:53:03.127223 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m11:53:03.133189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AABCCE50>]}
+[0m11:53:03.133189 [info ] [MainThread]: Found 7 models, 485 macros
+[0m11:53:03.133189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACC61650>]}
+[0m11:53:03.148981 [info ] [MainThread]: 
+[0m11:53:03.148981 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:53:03.148981 [info ] [MainThread]: 
+[0m11:53:03.151853 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:53:03.157311 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist'
+[0m11:53:03.232577 [debug] [ThreadPool]: Using duckdb connection "list_olist"
+[0m11:53:03.232577 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"olist"'
+    
+  
+  
+[0m11:53:03.232577 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:03.264312 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m11:53:03.264312 [debug] [ThreadPool]: On list_olist: Close
+[0m11:53:03.264312 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_main)
+[0m11:53:03.264312 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "main"
+"
+[0m11:53:03.280566 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:53:03.280566 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='olist'
+        and type='sqlite'
+    
+  
+[0m11:53:03.280566 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:53:03.280566 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:53:03.285890 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:53:03.285890 [debug] [ThreadPool]: On create_olist_main: BEGIN
+[0m11:53:03.285890 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:53:03.285890 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:53:03.288108 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+    
+        create schema if not exists "olist"."main"
+    
+[0m11:53:03.288108 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:53:03.288108 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m11:53:03.290830 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m11:53:03.290830 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m11:53:03.290830 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:53:03.290830 [debug] [ThreadPool]: On create_olist_main: Close
+[0m11:53:03.296391 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist_main'
+[0m11:53:03.302145 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m11:53:03.302145 [debug] [ThreadPool]: On list_olist_main: BEGIN
+[0m11:53:03.303120 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:03.303120 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:53:03.304455 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m11:53:03.304455 [debug] [ThreadPool]: On list_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist_main"} */
+select
+      'olist' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'olist'
+  
+[0m11:53:03.308914 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m11:53:03.310914 [debug] [ThreadPool]: On list_olist_main: ROLLBACK
+[0m11:53:03.311900 [debug] [ThreadPool]: Failed to rollback 'list_olist_main'
+[0m11:53:03.312894 [debug] [ThreadPool]: On list_olist_main: Close
+[0m11:53:03.315699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD0BDED0>]}
+[0m11:53:03.315699 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:53:03.315699 [debug] [MainThread]: On master: BEGIN
+[0m11:53:03.315699 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:53:03.315699 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:53:03.315699 [debug] [MainThread]: On master: COMMIT
+[0m11:53:03.315699 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:53:03.315699 [debug] [MainThread]: On master: COMMIT
+[0m11:53:03.315699 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:53:03.315699 [debug] [MainThread]: On master: Close
+[0m11:53:03.322373 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_customers
+[0m11:53:03.322373 [info ] [Thread-1 (]: 1 of 7 START sql view model main.stg_customers ................................. [RUN]
+[0m11:53:03.330651 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.stg_customers'
+[0m11:53:03.330651 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_customers
+[0m11:53:03.331847 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_customers"
+[0m11:53:03.331847 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_customers
+[0m11:53:03.366443 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_customers"
+[0m11:53:03.366443 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_customers"
+[0m11:53:03.366443 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: BEGIN
+[0m11:53:03.366443 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:53:03.366443 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.366443 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_customers"
+[0m11:53:03.366443 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+
+  
+  create view "olist"."main"."stg_customers__dbt_tmp" as (
+    with source as (select * from main.customers),
+renamed as (
+    select
+        customer_id,
+        customer_unique_id,
+        customer_city,
+        upper(customer_state) as customer_state
+    from source
+    where customer_id is not null
+)
+select * from renamed
+  );
+
+[0m11:53:03.376349 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.383360 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_customers"
+[0m11:53:03.383360 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+alter view "olist"."main"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m11:53:03.385379 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.387184 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m11:53:03.387184 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_customers"
+[0m11:53:03.387184 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: COMMIT
+[0m11:53:03.399839 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.405873 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_customers"
+[0m11:53:03.405873 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_customers"} */
+
+      drop view if exists "olist"."main"."stg_customers__dbt_backup" cascade
+    
+[0m11:53:03.407885 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.411903 [debug] [Thread-1 (]: On model.dbt_project.stg_customers: Close
+[0m11:53:03.414888 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACB7F950>]}
+[0m11:53:03.416224 [info ] [Thread-1 (]: 1 of 7 OK created sql view model main.stg_customers ............................ [[32mOK[0m in 0.09s]
+[0m11:53:03.417329 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_customers
+[0m11:53:03.418328 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_order_items
+[0m11:53:03.419340 [info ] [Thread-1 (]: 2 of 7 START sql view model main.stg_order_items ............................... [RUN]
+[0m11:53:03.419340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_customers, now model.dbt_project.stg_order_items)
+[0m11:53:03.421348 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_order_items
+[0m11:53:03.423346 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_order_items"
+[0m11:53:03.424335 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_order_items
+[0m11:53:03.428346 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_order_items"
+[0m11:53:03.429333 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.430334 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: BEGIN
+[0m11:53:03.430772 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.431895 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.431895 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.433233 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+  
+  create view "olist"."main"."stg_order_items__dbt_tmp" as (
+    with source as (
+    select * from main.order_items
+),
+
+renamed as (
+    select
+        order_id,
+        order_item_id,
+        product_id,
+        seller_id,
+        cast(shipping_limit_date as timestamp) as shipping_limit_at,
+        cast(price as decimal(10,2)) as price,
+        cast(freight_value as decimal(10,2)) as freight_value
+    from source
+    where order_id is not null
+    and price >= 0
+)
+
+select * from renamed
+  );
+
+[0m11:53:03.434289 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.436375 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.436375 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter view "olist"."main"."stg_order_items" rename to "stg_order_items__dbt_backup"
+[0m11:53:03.436375 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.436375 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.436375 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+alter view "olist"."main"."stg_order_items__dbt_tmp" rename to "stg_order_items"
+[0m11:53:03.436375 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.450006 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m11:53:03.450006 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.450006 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: COMMIT
+[0m11:53:03.453551 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.453551 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_order_items"
+[0m11:53:03.453551 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_order_items"} */
+
+      drop view if exists "olist"."main"."stg_order_items__dbt_backup" cascade
+    
+[0m11:53:03.453551 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.453551 [debug] [Thread-1 (]: On model.dbt_project.stg_order_items: Close
+[0m11:53:03.453551 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD695310>]}
+[0m11:53:03.466100 [info ] [Thread-1 (]: 2 of 7 OK created sql view model main.stg_order_items .......................... [[32mOK[0m in 0.03s]
+[0m11:53:03.467186 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_order_items
+[0m11:53:03.468210 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_orders
+[0m11:53:03.469204 [info ] [Thread-1 (]: 3 of 7 START sql view model main.stg_orders .................................... [RUN]
+[0m11:53:03.469204 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_order_items, now model.dbt_project.stg_orders)
+[0m11:53:03.470208 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_orders
+[0m11:53:03.472217 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_orders"
+[0m11:53:03.473220 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_orders
+[0m11:53:03.478218 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_orders"
+[0m11:53:03.480227 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.480227 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: BEGIN
+[0m11:53:03.482228 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.483226 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.484218 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.484961 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+  
+  create view "olist"."main"."stg_orders__dbt_tmp" as (
+    with source as (
+    select * from main.orders
+),
+
+renamed as (
+    select
+        order_id,
+        customer_id,
+        order_status,
+        cast(order_purchase_timestamp as timestamp) as purchased_at,
+        cast(order_delivered_customer_date as timestamp) as delivered_at,
+        cast(order_estimated_delivery_date as timestamp) as estimated_delivery_at
+    from source
+    where order_id is not null
+)
+
+select * from renamed
+  );
+
+[0m11:53:03.485530 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.488805 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.488805 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter view "olist"."main"."stg_orders" rename to "stg_orders__dbt_backup"
+[0m11:53:03.488805 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.488805 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.488805 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+alter view "olist"."main"."stg_orders__dbt_tmp" rename to "stg_orders"
+[0m11:53:03.488805 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.488805 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m11:53:03.488805 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.488805 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: COMMIT
+[0m11:53:03.500256 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.500256 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_orders"
+[0m11:53:03.500256 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_orders"} */
+
+      drop view if exists "olist"."main"."stg_orders__dbt_backup" cascade
+    
+[0m11:53:03.500256 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.500256 [debug] [Thread-1 (]: On model.dbt_project.stg_orders: Close
+[0m11:53:03.500256 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD7EFFD0>]}
+[0m11:53:03.500256 [info ] [Thread-1 (]: 3 of 7 OK created sql view model main.stg_orders ............................... [[32mOK[0m in 0.03s]
+[0m11:53:03.500256 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_orders
+[0m11:53:03.500256 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_payments
+[0m11:53:03.500256 [info ] [Thread-1 (]: 4 of 7 START sql view model main.stg_payments .................................. [RUN]
+[0m11:53:03.500256 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_orders, now model.dbt_project.stg_payments)
+[0m11:53:03.500256 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_payments
+[0m11:53:03.516704 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_payments"
+[0m11:53:03.517715 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_payments
+[0m11:53:03.521713 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_payments"
+[0m11:53:03.522719 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_payments"
+[0m11:53:03.523710 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: BEGIN
+[0m11:53:03.523710 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.524719 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.525716 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_payments"
+[0m11:53:03.526709 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_payments"} */
+
+  
+  create view "olist"."main"."stg_payments__dbt_tmp" as (
+    with source as (select * from main.payments),
+renamed as (
+    select
+        order_id,
+        payment_sequential,
+        payment_type,
+        payment_installments,
+        cast(payment_value as decimal(10,2)) as payment_value
+    from source
+    where order_id is not null
+)
+select * from renamed
+  );
+
+[0m11:53:03.528701 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.532257 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_payments"
+[0m11:53:03.533597 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_payments"} */
+alter view "olist"."main"."stg_payments__dbt_tmp" rename to "stg_payments"
+[0m11:53:03.534670 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.535733 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: COMMIT
+[0m11:53:03.536715 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_payments"
+[0m11:53:03.536715 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: COMMIT
+[0m11:53:03.537732 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.537732 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_payments"
+[0m11:53:03.537732 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_payments"} */
+
+      drop view if exists "olist"."main"."stg_payments__dbt_backup" cascade
+    
+[0m11:53:03.537732 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.537732 [debug] [Thread-1 (]: On model.dbt_project.stg_payments: Close
+[0m11:53:03.537732 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD7B09D0>]}
+[0m11:53:03.537732 [info ] [Thread-1 (]: 4 of 7 OK created sql view model main.stg_payments ............................. [[32mOK[0m in 0.04s]
+[0m11:53:03.549604 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_payments
+[0m11:53:03.549604 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_products
+[0m11:53:03.549604 [info ] [Thread-1 (]: 5 of 7 START sql view model main.stg_products .................................. [RUN]
+[0m11:53:03.549604 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_payments, now model.dbt_project.stg_products)
+[0m11:53:03.549604 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_products
+[0m11:53:03.549604 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_products"
+[0m11:53:03.549604 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_products
+[0m11:53:03.549604 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_products"
+[0m11:53:03.549604 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_products"
+[0m11:53:03.549604 [debug] [Thread-1 (]: On model.dbt_project.stg_products: BEGIN
+[0m11:53:03.549604 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.549604 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.564997 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_products"
+[0m11:53:03.565651 [debug] [Thread-1 (]: On model.dbt_project.stg_products: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_products"} */
+
+  
+  create view "olist"."main"."stg_products__dbt_tmp" as (
+    with source as (select * from main.products),
+renamed as (
+    select
+        product_id,
+        coalesce(product_category_name, 'unknown') as product_category_name,
+        cast(product_weight_g as decimal(10,2)) as product_weight_g,
+        cast(product_length_cm as decimal(10,2)) as product_length_cm
+    from source
+    where product_id is not null
+)
+select * from renamed
+  );
+
+[0m11:53:03.567937 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.571664 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_products"
+[0m11:53:03.571664 [debug] [Thread-1 (]: On model.dbt_project.stg_products: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_products"} */
+alter view "olist"."main"."stg_products__dbt_tmp" rename to "stg_products"
+[0m11:53:03.571664 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.571664 [debug] [Thread-1 (]: On model.dbt_project.stg_products: COMMIT
+[0m11:53:03.571664 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_products"
+[0m11:53:03.571664 [debug] [Thread-1 (]: On model.dbt_project.stg_products: COMMIT
+[0m11:53:03.571664 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.582479 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_products"
+[0m11:53:03.583503 [debug] [Thread-1 (]: On model.dbt_project.stg_products: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_products"} */
+
+      drop view if exists "olist"."main"."stg_products__dbt_backup" cascade
+    
+[0m11:53:03.584074 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.585594 [debug] [Thread-1 (]: On model.dbt_project.stg_products: Close
+[0m11:53:03.585594 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD6F1D90>]}
+[0m11:53:03.585594 [info ] [Thread-1 (]: 5 of 7 OK created sql view model main.stg_products ............................. [[32mOK[0m in 0.04s]
+[0m11:53:03.585594 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_products
+[0m11:53:03.585594 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_reviews
+[0m11:53:03.585594 [info ] [Thread-1 (]: 6 of 7 START sql view model main.stg_reviews ................................... [RUN]
+[0m11:53:03.585594 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_products, now model.dbt_project.stg_reviews)
+[0m11:53:03.585594 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_reviews
+[0m11:53:03.585594 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_reviews"
+[0m11:53:03.585594 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_reviews
+[0m11:53:03.601191 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_reviews"
+[0m11:53:03.603656 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_reviews"
+[0m11:53:03.604633 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: BEGIN
+[0m11:53:03.604633 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.605641 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.605641 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_reviews"
+[0m11:53:03.605641 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_reviews"} */
+
+  
+  create view "olist"."main"."stg_reviews__dbt_tmp" as (
+    with source as (select * from main.reviews),
+renamed as (
+    select
+        review_id,
+        order_id,
+        cast(review_score as integer) as review_score,
+        cast(review_creation_date as timestamp) as reviewed_at
+    from source
+    where order_id is not null
+)
+select * from renamed
+  );
+
+[0m11:53:03.605641 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.605641 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_reviews"
+[0m11:53:03.605641 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_reviews"} */
+alter view "olist"."main"."stg_reviews__dbt_tmp" rename to "stg_reviews"
+[0m11:53:03.605641 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.605641 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: COMMIT
+[0m11:53:03.615699 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_reviews"
+[0m11:53:03.617052 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: COMMIT
+[0m11:53:03.617052 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.620466 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_reviews"
+[0m11:53:03.620466 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_reviews"} */
+
+      drop view if exists "olist"."main"."stg_reviews__dbt_backup" cascade
+    
+[0m11:53:03.620466 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.620466 [debug] [Thread-1 (]: On model.dbt_project.stg_reviews: Close
+[0m11:53:03.620466 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD814E50>]}
+[0m11:53:03.620466 [info ] [Thread-1 (]: 6 of 7 OK created sql view model main.stg_reviews .............................. [[32mOK[0m in 0.03s]
+[0m11:53:03.620466 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_reviews
+[0m11:53:03.620466 [debug] [Thread-1 (]: Began running node model.dbt_project.stg_sellers
+[0m11:53:03.620466 [info ] [Thread-1 (]: 7 of 7 START sql view model main.stg_sellers ................................... [RUN]
+[0m11:53:03.632343 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_project.stg_reviews, now model.dbt_project.stg_sellers)
+[0m11:53:03.633671 [debug] [Thread-1 (]: Began compiling node model.dbt_project.stg_sellers
+[0m11:53:03.635697 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.stg_sellers"
+[0m11:53:03.637718 [debug] [Thread-1 (]: Began executing node model.dbt_project.stg_sellers
+[0m11:53:03.641718 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.stg_sellers"
+[0m11:53:03.642718 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_sellers"
+[0m11:53:03.643711 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: BEGIN
+[0m11:53:03.643711 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:53:03.644718 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.645707 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_sellers"
+[0m11:53:03.645707 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_sellers"} */
+
+  
+  create view "olist"."main"."stg_sellers__dbt_tmp" as (
+    with source as (select * from main.sellers),
+renamed as (
+    select
+        seller_id,
+        seller_city,
+        upper(seller_state) as seller_state
+    from source
+    where seller_id is not null
+)
+select * from renamed
+  );
+
+[0m11:53:03.646719 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.651729 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_sellers"
+[0m11:53:03.652848 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_sellers"} */
+alter view "olist"."main"."stg_sellers__dbt_tmp" rename to "stg_sellers"
+[0m11:53:03.653837 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:53:03.654844 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: COMMIT
+[0m11:53:03.654844 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_sellers"
+[0m11:53:03.654844 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: COMMIT
+[0m11:53:03.658922 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:53:03.662695 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.stg_sellers"
+[0m11:53:03.662695 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.stg_sellers"} */
+
+      drop view if exists "olist"."main"."stg_sellers__dbt_backup" cascade
+    
+[0m11:53:03.662695 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:53:03.666162 [debug] [Thread-1 (]: On model.dbt_project.stg_sellers: Close
+[0m11:53:03.666162 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '34dead32-1db8-4271-ac0f-4006b3177ce1', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD7A43D0>]}
+[0m11:53:03.666162 [info ] [Thread-1 (]: 7 of 7 OK created sql view model main.stg_sellers .............................. [[32mOK[0m in 0.03s]
+[0m11:53:03.666162 [debug] [Thread-1 (]: Finished running node model.dbt_project.stg_sellers
+[0m11:53:03.666162 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:53:03.666162 [debug] [MainThread]: On master: BEGIN
+[0m11:53:03.666162 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:53:03.666162 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:53:03.666162 [debug] [MainThread]: On master: COMMIT
+[0m11:53:03.666162 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:53:03.666162 [debug] [MainThread]: On master: COMMIT
+[0m11:53:03.666162 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:53:03.666162 [debug] [MainThread]: On master: Close
+[0m11:53:03.666162 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:53:03.666162 [debug] [MainThread]: Connection 'create_olist_main' was properly closed.
+[0m11:53:03.666162 [debug] [MainThread]: Connection 'list_olist_main' was properly closed.
+[0m11:53:03.666162 [debug] [MainThread]: Connection 'model.dbt_project.stg_sellers' was properly closed.
+[0m11:53:03.681810 [info ] [MainThread]: 
+[0m11:53:03.683443 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 0.53 seconds (0.53s).
+[0m11:53:03.685349 [debug] [MainThread]: Command end result
+[0m11:53:03.716914 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m11:53:03.717911 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m11:53:03.717911 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\run_results.json
+[0m11:53:03.717911 [info ] [MainThread]: 
+[0m11:53:03.717911 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:53:03.717911 [info ] [MainThread]: 
+[0m11:53:03.730428 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=7
+[0m11:53:03.732323 [debug] [MainThread]: Command `dbt run` succeeded at 11:53:03.732323 after 1.84 seconds
+[0m11:53:03.733486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACC13F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174A5059190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD28BD10>]}
+[0m11:53:03.734030 [debug] [MainThread]: Flushing usage events
+[0m11:53:05.633672 [debug] [MainThread]: An error was encountered while trying to flush usage events
