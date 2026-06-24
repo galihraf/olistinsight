@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_orders
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+      - name: order_status
+        tests:
+          - not_null
+
+  - name: stg_customers
+    columns:
+      - name: customer_id
+        tests:
+          - not_null
+          - unique
+
+  - name: stg_order_items
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+  - name: stg_payments
+    columns:
+      - name: order_id
+        tests:
+          - not_null
+
+  - name: stg_reviews
+    columns:
+      - name: order_id
+        tests:
+          - not_null
