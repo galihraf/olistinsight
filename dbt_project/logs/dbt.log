@@ -922,3 +922,628 @@ alter view "olist"."main"."stg_sellers__dbt_tmp" rename to "stg_sellers"
 [0m11:53:03.733486 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174ACC13F10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174A5059190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000174AD28BD10>]}
 [0m11:53:03.734030 [debug] [MainThread]: Flushing usage events
 [0m11:53:05.633672 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:47:36.317068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E96F6890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E979D350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E871A690>]}
+
+
+============================== 14:47:36.326359 | fdb7f00a-7bde-4799-98a6-790e4373b890 ==============================
+[0m14:47:36.326359 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:47:36.327703 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\galih\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt run --select int_orders_enriched', 'use_experimental_parser': 'False', 'log_path': 'D:\\Documents\\Portofolio Projects\\olistinsight\\dbt_project\\logs'}
+[0m14:47:36.880794 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E9824490>]}
+[0m14:47:36.942889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E97B8550>]}
+[0m14:47:36.947003 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:47:37.589659 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:47:39.252557 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m14:47:39.253534 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\intermediate\int_orders_enriched.sql
+[0m14:47:39.553165 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.marts
+[0m14:47:39.559504 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E97FEE10>]}
+[0m14:47:39.633247 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m14:47:39.671600 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m14:47:39.716365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E50F1C10>]}
+[0m14:47:39.717368 [info ] [MainThread]: Found 8 models, 485 macros
+[0m14:47:39.718382 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E9DEE310>]}
+[0m14:47:39.722111 [info ] [MainThread]: 
+[0m14:47:39.723223 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:47:39.725568 [info ] [MainThread]: 
+[0m14:47:39.726579 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:47:39.730113 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist'
+[0m14:47:43.540977 [debug] [ThreadPool]: Using duckdb connection "list_olist"
+[0m14:47:43.541976 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"olist"'
+    
+  
+  
+[0m14:47:43.541976 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:47:43.624516 [debug] [ThreadPool]: SQL status: OK in 0.082 seconds
+[0m14:47:43.627509 [debug] [ThreadPool]: On list_olist: Close
+[0m14:47:43.630357 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_main)
+[0m14:47:43.632360 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "main"
+"
+[0m14:47:43.641874 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:47:43.641874 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='olist'
+        and type='sqlite'
+    
+  
+[0m14:47:43.642893 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:47:43.646026 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:47:43.648577 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:47:43.648577 [debug] [ThreadPool]: On create_olist_main: BEGIN
+[0m14:47:43.651585 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:47:43.652094 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:47:43.653609 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+    
+        create schema if not exists "olist"."main"
+    
+[0m14:47:43.656759 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:47:43.658762 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m14:47:43.658762 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:47:43.659760 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m14:47:43.660773 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:47:43.660773 [debug] [ThreadPool]: On create_olist_main: Close
+[0m14:47:43.666494 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist_main'
+[0m14:47:43.673468 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m14:47:43.673468 [debug] [ThreadPool]: On list_olist_main: BEGIN
+[0m14:47:43.674471 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:47:43.674471 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:47:43.675980 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m14:47:43.677000 [debug] [ThreadPool]: On list_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist_main"} */
+select
+      'olist' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'olist'
+  
+[0m14:47:43.694975 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m14:47:43.697492 [debug] [ThreadPool]: On list_olist_main: ROLLBACK
+[0m14:47:43.716817 [debug] [ThreadPool]: Failed to rollback 'list_olist_main'
+[0m14:47:43.718357 [debug] [ThreadPool]: On list_olist_main: Close
+[0m14:47:43.721296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E9D8C190>]}
+[0m14:47:43.722386 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:47:43.723376 [debug] [MainThread]: On master: BEGIN
+[0m14:47:43.723376 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:47:43.725390 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:47:43.725390 [debug] [MainThread]: On master: COMMIT
+[0m14:47:43.726396 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:47:43.727382 [debug] [MainThread]: On master: COMMIT
+[0m14:47:43.727382 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:47:43.729410 [debug] [MainThread]: On master: Close
+[0m14:47:43.738950 [debug] [Thread-1 (]: Began running node model.dbt_project.int_orders_enriched
+[0m14:47:43.739989 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_orders_enriched ........................... [RUN]
+[0m14:47:43.741018 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.int_orders_enriched'
+[0m14:47:43.742016 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_orders_enriched
+[0m14:47:43.749581 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_orders_enriched"
+[0m14:47:43.753357 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_orders_enriched
+[0m14:47:43.787169 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_orders_enriched"
+[0m14:47:43.789737 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_orders_enriched"
+[0m14:47:43.789737 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: BEGIN
+[0m14:47:43.790736 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:47:43.791738 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:47:43.791738 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_orders_enriched"
+[0m14:47:43.791738 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_orders_enriched"} */
+
+  
+  create view "olist"."main"."int_orders_enriched__dbt_tmp" as (
+    with orders as (
+    select * from "olist"."main"."stg_orders"
+),
+
+order_items as (
+    select
+        order_id,
+        sum(price) as total_price,
+        sum(freight_value) as total_freight,
+        count(order_item_id) as total_items
+    from "olist"."main"."stg_order_items"
+    group by order_id
+),
+
+payments as (
+    select
+        order_id,
+        sum(payment_value) as total_payment,
+        max(payment_type) as payment_type
+    from "olist"."main"."stg_payments"
+    group by order_id
+),
+
+customers as (
+    select * from "olist"."main"."stg_customers"
+)
+
+select
+    o.order_id,
+    o.customer_id,
+    o.order_status,
+    o.purchased_at,
+    o.delivered_at,
+    o.estimated_delivery_at,
+    c.customer_city,
+    c.customer_state,
+    i.total_items,
+    i.total_price,
+    i.total_freight,
+    p.total_payment,
+    p.payment_type
+from orders o
+left join order_items i on o.order_id = i.order_id
+left join payments p on o.order_id = p.order_id
+left join customers c on o.customer_id = c.customer_id
+  );
+
+[0m14:47:43.799497 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m14:47:43.805551 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_orders_enriched"
+[0m14:47:43.806556 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_orders_enriched"} */
+alter view "olist"."main"."int_orders_enriched__dbt_tmp" rename to "int_orders_enriched"
+[0m14:47:43.808543 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m14:47:43.820047 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: COMMIT
+[0m14:47:43.821069 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_orders_enriched"
+[0m14:47:43.821069 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: COMMIT
+[0m14:47:43.826326 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:47:43.832696 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_orders_enriched"
+[0m14:47:43.832696 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_orders_enriched"} */
+
+      drop view if exists "olist"."main"."int_orders_enriched__dbt_backup" cascade
+    
+[0m14:47:43.834687 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:47:43.838701 [debug] [Thread-1 (]: On model.dbt_project.int_orders_enriched: Close
+[0m14:47:43.841950 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'fdb7f00a-7bde-4799-98a6-790e4373b890', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3EA21DE50>]}
+[0m14:47:43.843214 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_orders_enriched ...................... [[32mOK[0m in 0.10s]
+[0m14:47:43.845203 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_orders_enriched
+[0m14:47:43.849338 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:47:43.850359 [debug] [MainThread]: On master: BEGIN
+[0m14:47:43.850359 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:47:43.851870 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:47:43.851870 [debug] [MainThread]: On master: COMMIT
+[0m14:47:43.853420 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:47:43.853420 [debug] [MainThread]: On master: COMMIT
+[0m14:47:43.854559 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:47:43.854559 [debug] [MainThread]: On master: Close
+[0m14:47:43.855924 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:47:43.855924 [debug] [MainThread]: Connection 'create_olist_main' was properly closed.
+[0m14:47:43.855924 [debug] [MainThread]: Connection 'list_olist_main' was properly closed.
+[0m14:47:43.855924 [debug] [MainThread]: Connection 'model.dbt_project.int_orders_enriched' was properly closed.
+[0m14:47:43.857431 [info ] [MainThread]: 
+[0m14:47:43.858998 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 4.13 seconds (4.13s).
+[0m14:47:43.860176 [debug] [MainThread]: Command end result
+[0m14:47:43.895391 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m14:47:43.898507 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m14:47:43.907427 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\run_results.json
+[0m14:47:43.907427 [info ] [MainThread]: 
+[0m14:47:43.908953 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:47:43.908953 [info ] [MainThread]: 
+[0m14:47:43.911514 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:47:43.912525 [debug] [MainThread]: Command `dbt run` succeeded at 14:47:43.912525 after 7.71 seconds
+[0m14:47:43.913690 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E97F3A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E867B7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E3E83CFD50>]}
+[0m14:47:43.913690 [debug] [MainThread]: Flushing usage events
+[0m14:47:45.777537 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:53:59.149208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E09D7FCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E08CCDCD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E08C1FAD0>]}
+
+
+============================== 14:53:59.157901 | b6ec2a50-98ae-4147-87c5-1de76741aae8 ==============================
+[0m14:53:59.157901 [info ] [MainThread]: Running with dbt=1.11.11
+[0m14:53:59.159914 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\galih\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt run --select int_seller_enriched', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'D:\\Documents\\Portofolio Projects\\olistinsight\\dbt_project\\logs'}
+[0m14:53:59.650510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E09D3C690>]}
+[0m14:53:59.715478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E05408110>]}
+[0m14:53:59.720256 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m14:54:00.115677 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m14:54:00.351652 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m14:54:00.351652 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\intermediate\int_seller_enriched.sql
+[0m14:54:00.672731 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.marts
+[0m14:54:00.679132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E09E64ED0>]}
+[0m14:54:00.756942 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m14:54:00.761671 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m14:54:00.795236 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E09F91C90>]}
+[0m14:54:00.796234 [info ] [MainThread]: Found 9 models, 485 macros
+[0m14:54:00.797233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E0A283C90>]}
+[0m14:54:00.799662 [info ] [MainThread]: 
+[0m14:54:00.800666 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m14:54:00.801666 [info ] [MainThread]: 
+[0m14:54:00.803993 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m14:54:00.806601 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist'
+[0m14:54:00.979048 [debug] [ThreadPool]: Using duckdb connection "list_olist"
+[0m14:54:00.980035 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"olist"'
+    
+  
+  
+[0m14:54:00.980035 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:01.068953 [debug] [ThreadPool]: SQL status: OK in 0.088 seconds
+[0m14:54:01.072230 [debug] [ThreadPool]: On list_olist: Close
+[0m14:54:01.073244 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_main)
+[0m14:54:01.074769 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "main"
+"
+[0m14:54:01.082403 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:54:01.083512 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='olist'
+        and type='sqlite'
+    
+  
+[0m14:54:01.083512 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:54:01.086740 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:54:01.088984 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:54:01.090502 [debug] [ThreadPool]: On create_olist_main: BEGIN
+[0m14:54:01.091532 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:54:01.092521 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:54:01.093513 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+    
+        create schema if not exists "olist"."main"
+    
+[0m14:54:01.097041 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m14:54:01.098053 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m14:54:01.098053 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m14:54:01.099027 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m14:54:01.099027 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m14:54:01.100236 [debug] [ThreadPool]: On create_olist_main: Close
+[0m14:54:01.107826 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist_main'
+[0m14:54:01.114591 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m14:54:01.114591 [debug] [ThreadPool]: On list_olist_main: BEGIN
+[0m14:54:01.114591 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:54:01.116106 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m14:54:01.117585 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m14:54:01.118663 [debug] [ThreadPool]: On list_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist_main"} */
+select
+      'olist' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'olist'
+  
+[0m14:54:01.135795 [debug] [ThreadPool]: SQL status: OK in 0.017 seconds
+[0m14:54:01.137815 [debug] [ThreadPool]: On list_olist_main: ROLLBACK
+[0m14:54:01.139811 [debug] [ThreadPool]: Failed to rollback 'list_olist_main'
+[0m14:54:01.140811 [debug] [ThreadPool]: On list_olist_main: Close
+[0m14:54:01.143829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E01EA4E50>]}
+[0m14:54:01.145126 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:54:01.145126 [debug] [MainThread]: On master: BEGIN
+[0m14:54:01.146127 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:54:01.146127 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:54:01.147113 [debug] [MainThread]: On master: COMMIT
+[0m14:54:01.148124 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:54:01.148124 [debug] [MainThread]: On master: COMMIT
+[0m14:54:01.149120 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:54:01.149120 [debug] [MainThread]: On master: Close
+[0m14:54:01.157416 [debug] [Thread-1 (]: Began running node model.dbt_project.int_seller_enriched
+[0m14:54:01.158416 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_seller_enriched ........................... [RUN]
+[0m14:54:01.159973 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.int_seller_enriched'
+[0m14:54:01.159973 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_seller_enriched
+[0m14:54:01.169158 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_seller_enriched"
+[0m14:54:01.171600 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_seller_enriched
+[0m14:54:01.205729 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_seller_enriched"
+[0m14:54:01.206753 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_seller_enriched"
+[0m14:54:01.208258 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: BEGIN
+[0m14:54:01.209270 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m14:54:01.210267 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:54:01.210267 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_seller_enriched"
+[0m14:54:01.211266 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_seller_enriched"} */
+
+  
+  create view "olist"."main"."int_seller_enriched__dbt_tmp" as (
+    with sellers as (
+    select * from "olist"."main"."stg_sellers"
+),
+
+order_items as (
+    select
+        seller_id,
+        count(distinct order_id) as total_orders,
+        sum(price) as total_revenue,
+        avg(price) as avg_price,
+    from "olist"."main"."stg_order_items"
+    group by seller_id
+),
+
+reviews as (
+    select
+        oi.seller_id,
+        avg(r.review_score) as avg_review_score,
+    from "olist"."main"."stg_reviews" r
+    left join "olist"."main"."stg_order_items" oi on r.order_id = oi.order_id
+    group by oi.seller_id
+)
+
+select
+    s.seller_id,
+    s.seller_city,
+    s.seller_state,
+    i.total_orders,
+    i.total_revenue,
+    i.avg_price,
+    r.avg_review_score
+from sellers s
+left join order_items i on s.seller_id = i.seller_id
+left join reviews r on s.seller_id = r.seller_id
+  );
+
+[0m14:54:01.215771 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:54:01.222314 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_seller_enriched"
+[0m14:54:01.223357 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_seller_enriched"} */
+alter view "olist"."main"."int_seller_enriched__dbt_tmp" rename to "int_seller_enriched"
+[0m14:54:01.225939 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:54:01.237213 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: COMMIT
+[0m14:54:01.238216 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_seller_enriched"
+[0m14:54:01.238216 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: COMMIT
+[0m14:54:01.242937 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m14:54:01.248455 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_seller_enriched"
+[0m14:54:01.249703 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_seller_enriched"} */
+
+      drop view if exists "olist"."main"."int_seller_enriched__dbt_backup" cascade
+    
+[0m14:54:01.250710 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m14:54:01.254645 [debug] [Thread-1 (]: On model.dbt_project.int_seller_enriched: Close
+[0m14:54:01.257785 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b6ec2a50-98ae-4147-87c5-1de76741aae8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E0A7B6D50>]}
+[0m14:54:01.258903 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_seller_enriched ...................... [[32mOK[0m in 0.10s]
+[0m14:54:01.259885 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_seller_enriched
+[0m14:54:01.262078 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:54:01.263108 [debug] [MainThread]: On master: BEGIN
+[0m14:54:01.263108 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:54:01.264121 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m14:54:01.264121 [debug] [MainThread]: On master: COMMIT
+[0m14:54:01.265350 [debug] [MainThread]: Using duckdb connection "master"
+[0m14:54:01.266352 [debug] [MainThread]: On master: COMMIT
+[0m14:54:01.267449 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m14:54:01.267449 [debug] [MainThread]: On master: Close
+[0m14:54:01.267449 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:54:01.268939 [debug] [MainThread]: Connection 'create_olist_main' was properly closed.
+[0m14:54:01.268939 [debug] [MainThread]: Connection 'list_olist_main' was properly closed.
+[0m14:54:01.269940 [debug] [MainThread]: Connection 'model.dbt_project.int_seller_enriched' was properly closed.
+[0m14:54:01.269940 [info ] [MainThread]: 
+[0m14:54:01.271942 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.47 seconds (0.47s).
+[0m14:54:01.271942 [debug] [MainThread]: Command end result
+[0m14:54:01.310414 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m14:54:01.312803 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m14:54:01.321187 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\run_results.json
+[0m14:54:01.322173 [info ] [MainThread]: 
+[0m14:54:01.323261 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:54:01.324287 [info ] [MainThread]: 
+[0m14:54:01.325291 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:54:01.326848 [debug] [MainThread]: Command `dbt run` succeeded at 14:54:01.326848 after 2.33 seconds
+[0m14:54:01.326848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E09D50C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E020F2190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000019E020F2110>]}
+[0m14:54:01.328194 [debug] [MainThread]: Flushing usage events
+[0m14:54:03.641045 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:05:12.760086 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027270338D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272703EFAD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002727039DE90>]}
+
+
+============================== 15:05:12.769431 | cf75081a-5b9f-4fef-b9ea-df41e00b6a31 ==============================
+[0m15:05:12.769431 [info ] [MainThread]: Running with dbt=1.11.11
+[0m15:05:12.770820 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\galih\\.dbt', 'invocation_command': 'dbt run --select int_products_enriched', 'indirect_selection': 'eager', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'D:\\Documents\\Portofolio Projects\\olistinsight\\dbt_project\\logs'}
+[0m15:05:13.270484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272703DCC90>]}
+[0m15:05:13.330769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726BB09ED0>]}
+[0m15:05:13.335827 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:05:13.726921 [debug] [MainThread]: checksum: 30a8cc8fdcbf66701b0944d4ccce3fa46dd04b61e5df68b9f16d57b2e0e3f0be, vars: {}, profile: , target: , version: 1.11.11
+[0m15:05:13.934181 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m15:05:13.935193 [debug] [MainThread]: Partial parsing: added file: dbt_project://models\intermediate\int_products_enriched.sql
+[0m15:05:14.233788 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_project.marts
+[0m15:05:14.241345 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272703EFE10>]}
+[0m15:05:14.315981 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m15:05:14.319052 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m15:05:14.349896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002726BD919D0>]}
+[0m15:05:14.350881 [info ] [MainThread]: Found 10 models, 485 macros
+[0m15:05:14.351884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272708F55D0>]}
+[0m15:05:14.353404 [info ] [MainThread]: 
+[0m15:05:14.354432 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:05:14.355436 [info ] [MainThread]: 
+[0m15:05:14.356967 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:05:14.359519 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist'
+[0m15:05:14.522175 [debug] [ThreadPool]: Using duckdb connection "list_olist"
+[0m15:05:14.523178 [debug] [ThreadPool]: On list_olist: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"olist"'
+    
+  
+  
+[0m15:05:14.523178 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:14.634496 [debug] [ThreadPool]: SQL status: OK in 0.111 seconds
+[0m15:05:14.639089 [debug] [ThreadPool]: On list_olist: Close
+[0m15:05:14.640086 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_olist, now create_olist_main)
+[0m15:05:14.642088 [debug] [ThreadPool]: Creating schema "database: "olist"
+schema: "main"
+"
+[0m15:05:14.651632 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m15:05:14.653149 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='olist'
+        and type='sqlite'
+    
+  
+[0m15:05:14.654166 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:05:14.658205 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m15:05:14.661557 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m15:05:14.662636 [debug] [ThreadPool]: On create_olist_main: BEGIN
+[0m15:05:14.665014 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:14.666020 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m15:05:14.667048 [debug] [ThreadPool]: On create_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "create_olist_main"} */
+
+    
+    
+        create schema if not exists "olist"."main"
+    
+[0m15:05:14.670809 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:05:14.672812 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m15:05:14.673814 [debug] [ThreadPool]: Using duckdb connection "create_olist_main"
+[0m15:05:14.675255 [debug] [ThreadPool]: On create_olist_main: COMMIT
+[0m15:05:14.676768 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:14.678783 [debug] [ThreadPool]: On create_olist_main: Close
+[0m15:05:14.686350 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_olist_main'
+[0m15:05:14.692935 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m15:05:14.693973 [debug] [ThreadPool]: On list_olist_main: BEGIN
+[0m15:05:14.693973 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:05:14.695286 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:05:14.697298 [debug] [ThreadPool]: Using duckdb connection "list_olist_main"
+[0m15:05:14.698402 [debug] [ThreadPool]: On list_olist_main: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "connection_name": "list_olist_main"} */
+select
+      'olist' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'olist'
+  
+[0m15:05:14.721268 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m15:05:14.723445 [debug] [ThreadPool]: On list_olist_main: ROLLBACK
+[0m15:05:14.725641 [debug] [ThreadPool]: Failed to rollback 'list_olist_main'
+[0m15:05:14.726643 [debug] [ThreadPool]: On list_olist_main: Close
+[0m15:05:14.730698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000272709C4E10>]}
+[0m15:05:14.730698 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:14.732206 [debug] [MainThread]: On master: BEGIN
+[0m15:05:14.733277 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:05:14.734471 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:05:14.734471 [debug] [MainThread]: On master: COMMIT
+[0m15:05:14.735521 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:14.735521 [debug] [MainThread]: On master: COMMIT
+[0m15:05:14.737029 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:05:14.737029 [debug] [MainThread]: On master: Close
+[0m15:05:14.744893 [debug] [Thread-1 (]: Began running node model.dbt_project.int_products_enriched
+[0m15:05:14.745899 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_products_enriched ......................... [RUN]
+[0m15:05:14.747273 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.dbt_project.int_products_enriched'
+[0m15:05:14.748272 [debug] [Thread-1 (]: Began compiling node model.dbt_project.int_products_enriched
+[0m15:05:14.756944 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_project.int_products_enriched"
+[0m15:05:14.758952 [debug] [Thread-1 (]: Began executing node model.dbt_project.int_products_enriched
+[0m15:05:14.793647 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_project.int_products_enriched"
+[0m15:05:14.794650 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_products_enriched"
+[0m15:05:14.796159 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: BEGIN
+[0m15:05:14.796159 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:05:14.798780 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:05:14.799776 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_products_enriched"
+[0m15:05:14.799776 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_products_enriched"} */
+
+  
+  create view "olist"."main"."int_products_enriched__dbt_tmp" as (
+    with product as (
+    select * from "olist"."main"."stg_products"
+),
+
+category as (
+    select * from main.category_translation
+),
+
+order_items as (
+    select
+        product_id,
+        count(distinct order_id) as total_orders,
+        sum(price) as total_revenue,
+        avg(price) as avg_price
+    from "olist"."main"."stg_order_items"
+    group by product_id
+),
+
+reviews as (
+    select
+        oi.product_id,
+        avg(r.review_score) as avg_review_score
+    from "olist"."main"."stg_reviews" r
+    left join "olist"."main"."stg_order_items" oi on r.order_id = oi.order_id
+    group by oi.product_id
+)
+
+select
+    p.product_id,
+    p.product_category_name,
+    coalesce(c.product_category_name_english, p.product_category_name) as category_english,
+    i.total_orders,
+    i.total_revenue,
+    i.avg_price,
+    r.avg_review_score
+from product p
+left join category c on p.product_category_name = c.product_category_name
+left join order_items i on p.product_id = i.product_id
+left join reviews r on p.product_id = r.product_id
+  );
+
+[0m15:05:14.806804 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m15:05:14.814000 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_products_enriched"
+[0m15:05:14.815522 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_products_enriched"} */
+alter view "olist"."main"."int_products_enriched__dbt_tmp" rename to "int_products_enriched"
+[0m15:05:14.818552 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:05:14.832404 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: COMMIT
+[0m15:05:14.833429 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_products_enriched"
+[0m15:05:14.834813 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: COMMIT
+[0m15:05:14.839721 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m15:05:14.846988 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_project.int_products_enriched"
+[0m15:05:14.847990 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: /* {"app": "dbt", "dbt_version": "1.11.11", "profile_name": "dbt_project", "target_name": "dev", "node_id": "model.dbt_project.int_products_enriched"} */
+
+      drop view if exists "olist"."main"."int_products_enriched__dbt_backup" cascade
+    
+[0m15:05:14.849499 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:05:14.853076 [debug] [Thread-1 (]: On model.dbt_project.int_products_enriched: Close
+[0m15:05:14.858276 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'cf75081a-5b9f-4fef-b9ea-df41e00b6a31', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027270EBB710>]}
+[0m15:05:14.859788 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_products_enriched .................... [[32mOK[0m in 0.11s]
+[0m15:05:14.860800 [debug] [Thread-1 (]: Finished running node model.dbt_project.int_products_enriched
+[0m15:05:14.863926 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:14.864930 [debug] [MainThread]: On master: BEGIN
+[0m15:05:14.864930 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:05:14.866929 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:05:14.866929 [debug] [MainThread]: On master: COMMIT
+[0m15:05:14.867932 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:05:14.869326 [debug] [MainThread]: On master: COMMIT
+[0m15:05:14.870840 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:05:14.871893 [debug] [MainThread]: On master: Close
+[0m15:05:14.872890 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:05:14.872890 [debug] [MainThread]: Connection 'create_olist_main' was properly closed.
+[0m15:05:14.874154 [debug] [MainThread]: Connection 'list_olist_main' was properly closed.
+[0m15:05:14.875173 [debug] [MainThread]: Connection 'model.dbt_project.int_products_enriched' was properly closed.
+[0m15:05:14.875173 [info ] [MainThread]: 
+[0m15:05:14.877192 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.52 seconds (0.52s).
+[0m15:05:14.879456 [debug] [MainThread]: Command end result
+[0m15:05:14.915395 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\manifest.json
+[0m15:05:14.921360 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\semantic_manifest.json
+[0m15:05:14.929138 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Documents\Portofolio Projects\olistinsight\dbt_project\target\run_results.json
+[0m15:05:14.930179 [info ] [MainThread]: 
+[0m15:05:14.931519 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:05:14.932532 [info ] [MainThread]: 
+[0m15:05:14.933527 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:05:14.935039 [debug] [MainThread]: Command `dbt run` succeeded at 15:05:14.935039 after 2.30 seconds
+[0m15:05:14.936048 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027270427F90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027268782190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002727036D1D0>]}
+[0m15:05:14.937046 [debug] [MainThread]: Flushing usage events
+[0m15:05:17.273908 [debug] [MainThread]: An error was encountered while trying to flush usage events
