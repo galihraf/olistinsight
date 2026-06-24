@@ -12,6 +12,8 @@ marts = [
     "mart_product_performance",
     "mart_customer_behavior",
     "mart_delivery_performance",
+    "mart_geo_analysis",
+    "mart_cohort_analysis",
 ]
 
 for mart in marts:
